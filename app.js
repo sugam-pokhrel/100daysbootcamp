@@ -1,7 +1,19 @@
-const nums=[1,2,3,4];
-let ans=0;
-nums.map((i)=>{ans=ans+i});
-console.log(ans);
 
 
-// function MakeCar(carname,carcolor,)
+
+function MakeCar(carname,carmodel,carcolor,noofdoors){
+
+    this.carname=carname;
+    this.carmodel=carmodel;
+    this.carcolor=carcolor;
+    this.noofdoors=noofdoors;
+
+    this.honk=()=>{console.log('beep boop fucker');}
+
+    this.lock=()=>{console.log(`locked ${this.noofdoors} doors`);}
+}
+
+let tesla=new MakeCar('tesla','T4','white',4);
+tesla.lock();
+
+
