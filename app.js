@@ -1,19 +1,30 @@
 
+//tjis is an example of a class
+
+// function MakeCar(carname,carmodel,carcolor,noofdoors){
+
+//     this.carname=carname;
+//     this.carmodel=carmodel;
+//     this.carcolor=carcolor;
+//     this.noofdoors=noofdoors;
+
+//     this.honk=()=>{console.log('beep boop fucker');}
+
+//     this.lock=()=>{console.log(`locked ${this.noofdoors} doors`);}
+// }
+
+// let tesla=new MakeCar('tesla','T4','white',4);
+// tesla.lock();
 
 
-function MakeCar(carname,carmodel,carcolor,noofdoors){
+//The below is the example of api
 
-    this.carname=carname;
-    this.carmodel=carmodel;
-    this.carcolor=carcolor;
-    this.noofdoors=noofdoors;
+fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data)
 
-    this.honk=()=>{console.log('beep boop fucker');}
+    }).catch(err=>{console.log(err)});
 
-    this.lock=()=>{console.log(`locked ${this.noofdoors} doors`);}
-}
-
-let tesla=new MakeCar('tesla','T4','white',4);
-tesla.lock();
 
 
